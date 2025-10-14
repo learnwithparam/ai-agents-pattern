@@ -142,6 +142,64 @@ python patterns/03_parallelization.py
   - *Data analyst copilot that generates code to compute KPIs, runs safely in sandbox, and returns results*
   - *Spreadsheet assistant that writes & executes formulas based on user queries*
 
+### 🔄 RAG Pipeline Patterns
+- **29_query_rewriter.py** - Rewrite and optimize queries for better retrieval
+  - *Search engine that rewrites user queries to improve results: "how to code" → "Python programming tutorial for beginners"*
+  - *Customer support that expands vague questions into specific, actionable queries*
+- **30_relevancy_check.py** - Check and filter relevant information
+  - *Content moderation system that scores articles for relevance to user interests*
+  - *Research assistant that filters academic papers by relevance to research topic*
+- **31_data_processing.py** - Process and structure data for RAG systems
+  - *Document processor that cleans, chunks, and structures PDFs for knowledge base*
+  - *Data pipeline that transforms raw text into searchable, categorized content*
+- **32_plan_executor.py** - Execute structured plans with monitoring
+  - *Project management AI that breaks down tasks into steps and tracks progress*
+  - *Workflow automation that executes complex business processes step-by-step*
+- **33_anonymization.py** - Anonymize and de-anonymize data for privacy
+  - *Healthcare system that removes patient names while preserving medical data*
+  - *Customer data processor that anonymizes PII for analytics while maintaining reversibility*
+
+### 🧠 Advanced Agentic Architectures (34-46)
+- **34_react.py** - Reason + Act Loop (ReAct)
+  - *Customer support AI that reasons through issues step-by-step, queries database for answers, and takes live actions (e.g., refund, escalate, notify user)*
+  - *Data-cleaning agent that identifies problem entries, applies fixes, then verifies results dynamically*
+- **35_pev.py** - Plan–Execute–Verify (PEV)
+  - *Financial trading bot that plans trades, executes safely, and verifies profit/loss outcomes before next cycle*
+  - *DevOps AI that deploys updates → tests functionality → rolls back automatically if verification fails*
+- **36_blackboard.py** - Collaborative Multi-Agent Blackboard
+  - *Research assistant system where multiple domain agents (e.g., legal, financial, tech) post and refine shared insights in a central memory board*
+  - *Bug-triage AI where analysis, fix, and QA agents collaborate on one shared state to converge on a solution*
+- **37_episodic_semantic_memory.py** - Dual Memory: Episodic + Semantic
+  - *AI tutor that recalls what topics a student struggled with (episodic) while leveraging structured knowledge (semantic) for tailored lessons*
+  - *Personal assistant that remembers past interactions and learns factual context like birthdays, preferences, or goals*
+- **38_tree_of_thoughts.py** - Tree of Thoughts (ToT) Reasoning
+  - *Strategic planner that explores multiple reasoning paths for a problem (e.g., marketing strategies) and picks the most optimal route*
+  - *Problem-solver that branches reasoning alternatives, evaluates partial outcomes, and merges best insights*
+- **39_mental_loop.py** - Internal Simulation Loop
+  - *Robot controller that simulates movements or actions internally before committing to real-world execution*
+  - *Financial decision engine that runs "mental" dry-runs of portfolio changes before actual trades*
+- **40_meta_controller.py** - Meta-Agent Task Router
+  - *AI manager that routes incoming requests to best-fit specialist agents (e.g., "analytics", "design", "sales")*
+  - *Multi-department enterprise assistant that orchestrates and supervises agents across different workflows*
+- **41_graph_memory.py** - Graph-Structured World Model
+  - *Research summarizer that extracts entities and relations (people, projects, papers) into a knowledge graph*
+  - *Customer insight AI that links interactions, purchases, and feedback in a connected data graph for richer reasoning*
+- **42_ensemble.py** - Ensemble of Experts
+  - *Content generator that combines outputs from multiple expert AIs (tone, grammar, SEO) before final synthesis*
+  - *Decision engine that aggregates recommendations from several models and selects the most consistent result*
+- **43_dry_run.py** - Dry-Run Simulation Harness
+  - *Financial AI that simulates trades or investment decisions and requires approval before live execution*
+  - *Operations assistant that runs workflow simulations to validate downstream safety before deployment*
+- **44_rlhf.py** - Reinforcement Learning from Human Feedback
+  - *Content generation system that continuously improves responses based on human ratings and feedback loops*
+  - *Customer interaction AI that refines tone and accuracy using user satisfaction scores*
+- **45_cellular_automata.py** - Local Interaction → Global Behavior
+  - *Traffic optimizer where each vehicle agent reacts locally (speed, distance) to produce smooth flow system-wide*
+  - *Urban planning simulator where thousands of micro-agents self-organize housing, transport, and energy networks*
+- **46_reflexive_metacognitive.py** - Self-Aware and Self-Evaluating Agent
+  - *Medical assistant AI that measures its confidence per diagnosis and automatically escalates uncertain cases to human experts*
+  - *Customer service bot that knows when it's unsure or stuck and requests clarification or human takeover*
+
 ## 🔧 API Keys
 
 Add at least one to your `.env` file:
@@ -168,53 +226,58 @@ MISTRAL_API_KEY=your_key_here     # European models
 8. **Memory Management** - Manage conversation context and user preferences
 
 ### 🔧 Advanced Techniques
-9. **MCP** - Connect to external tools via Model Context Protocol
-10. **Goal Setting** - Set and track progress toward objectives
-11. **Exception Handling** - Handle errors and recover gracefully
-12. **Human-in-the-Loop** - Integrate human oversight and intervention
-13. **Knowledge Retrieval** - Use RAG for better responses
-14. **Inter-Agent Communication** - Enable agents to work together
-15. **Resource Optimization** - Optimize for cost vs performance
+10. **MCP** - Connect to external tools via Model Context Protocol
+11. **Goal Setting** - Set and track progress toward objectives
+12. **Exception Handling** - Handle errors and recover gracefully
+13. **Human-in-the-Loop** - Integrate human oversight and intervention
+14. **Knowledge Retrieval** - Use RAG for better responses
+15. **Inter-Agent Communication** - Enable agents to work together
+16. **Resource Optimization** - Optimize for cost vs performance
 
 ### 🧠 Reasoning & Problem Solving
-16. **Chain-of-Thought** - Step-by-step reasoning process
-17. **Self-Correction** - Review and improve solutions
-18. **Problem Decomposition** - Break down complex problems
+17a. **Chain-of-Thought** - Step-by-step reasoning process
+17b. **Self-Correction** - Review and improve solutions
+17c. **Problem Decomposition** - Break down complex problems
 
 ### 🛡️ Safety & Quality Assurance
-19. **Guardrails** - Implement safety and content filtering
-20. **Evaluation** - Assess AI response quality and safety
-21. **Monitoring** - Track performance and behavior metrics
+18. **Guardrails** - Implement safety and content filtering
+19a. **Evaluation** - Assess AI response quality and safety
+19b. **Monitoring** - Track performance and behavior metrics
 
 ### 📊 Management & Organization
-22. **Prioritization** - Manage tasks and workload intelligently
-23. **Exploration & Discovery** - Research and knowledge discovery
-24. **Pydantic Validation** - Type-safe data validation
+20. **Prioritization** - Manage tasks and workload intelligently
+21. **Exploration & Discovery** - Research and knowledge discovery
+22. **Pydantic Validation** - Type-safe data validation
 
 ### 🚀 System Architecture
-25. **Agentic RAG** - Intelligent retrieval-augmented generation
-26. **Workflow Orchestration** - Coordinate complex AI workflows
-27. **Subgraphs** - Create modular, reusable components
-28. **State Machines** - Implement event-driven agent behavior
-29. **Recursive Agents** - Build self-referencing AI systems
-30. **Code Execution** - Safely execute code with AI agents
+23. **Agentic RAG** - Intelligent retrieval-augmented generation
+24. **Workflow Orchestration** - Coordinate complex AI workflows
+25. **Subgraphs** - Create modular, reusable components
+26. **State Machines** - Implement event-driven agent behavior
+27. **Recursive Agents** - Build self-referencing AI systems
+28. **Code Execution** - Safely execute code with AI agents
 
 ### 🔄 RAG Pipeline Patterns
-- **29_query_rewriter.py** - Rewrite and optimize queries for better retrieval
-  - *Search engine that rewrites user queries to improve results: "how to code" → "Python programming tutorial for beginners"*
-  - *Customer support that expands vague questions into specific, actionable queries*
-- **30_relevancy_check.py** - Check and filter relevant information
-  - *Content moderation system that scores articles for relevance to user interests*
-  - *Research assistant that filters academic papers by relevance to research topic*
-- **31_data_processing.py** - Process and structure data for RAG systems
-  - *Document processor that cleans, chunks, and structures PDFs for knowledge base*
-  - *Data pipeline that transforms raw text into searchable, categorized content*
-- **32_plan_executor.py** - Execute structured plans with monitoring
-  - *Project management AI that breaks down tasks into steps and tracks progress*
-  - *Workflow automation that executes complex business processes step-by-step*
-- **33_anonymization.py** - Anonymize and de-anonymize data for privacy
-  - *Healthcare system that removes patient names while preserving medical data*
-  - *Customer data processor that anonymizes PII for analytics while maintaining reversibility*
+29. **Query Rewriter** - Rewrite and optimize queries for better retrieval
+30. **Relevancy Check** - Check and filter relevant information
+31. **Data Processing** - Process and structure data for RAG systems
+32. **Plan Executor** - Execute structured plans with monitoring
+33. **Anonymization** - Anonymize and de-anonymize data for privacy
+
+### 🧠 Advanced Agentic Architectures
+34. **ReAct** - Dynamic reasoning and action loops
+35. **PEV** - Plan-Execute-Verify workflows
+36. **Blackboard Systems** - Multi-agent collaboration
+37. **Episodic + Semantic Memory** - Dual-memory systems
+38. **Tree of Thoughts** - Systematic reasoning exploration
+39. **Mental Loop** - Simulation before execution
+40. **Meta-Controller** - Intelligent task routing
+41. **Graph Memory** - Structured knowledge storage
+42. **Ensemble** - Multiple perspective analysis
+43. **Dry-Run Harness** - Safety-critical execution
+44. **RLHF** - Self-improvement through feedback
+45. **Cellular Automata** - Emergent behavior systems
+46. **Reflexive Metacognitive** - Self-aware AI systems
 
 ## 🎯 Supported Providers
 
@@ -251,6 +314,7 @@ The system auto-detects available providers and works offline with Ollama!
 3. **Master Reasoning** - Practice patterns 17a-17c for better AI thinking
 4. **Build Systems** - Combine patterns 23-28 for production systems
 5. **Master RAG** - Learn patterns 29-33 for advanced retrieval systems
+6. **Advanced Architectures** - Explore patterns 34-46 for cutting-edge agentic systems
 
 ## 🎓 Ready to Go Beyond Patterns?
 
