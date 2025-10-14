@@ -304,6 +304,23 @@ class CellularAutomata:
             "active_agents": len([a for a in self.agents.values() if a.state == "active"]),
             "total_agents": len(self.agents)
         }
+    
+    def print_grid(self) -> None:
+        """Print the current state of the grid."""
+        print("  " + "".join(f"{i:2}" for i in range(self.width)))
+        for y in range(self.height):
+            row = f"{y:2}"
+            for x in range(self.width):
+                cell = self.grid[y][x]
+                if cell.state == CellState.AGENT:
+                    row += "🤖"
+                elif cell.state == CellState.RESOURCE:
+                    row += "💎"
+                elif cell.state == CellState.OBSTACLE:
+                    row += "🚧"
+                else:
+                    row += "⬜"
+            print(row)
 
 def main():
     print("🔬 Cellular Automata Pattern")
@@ -330,9 +347,21 @@ def main():
         
         update_result = ca.update()
         
+        # Show agent updates
+        for update in update_result['updates']:
+            agent_id = update['agent_id']
+            position = update['position']
+            energy = update['energy']
+            state = update['state']
+            print(f"  {agent_id}: pos=({position[0]},{position[1]}) energy={energy:.1f} state={state}")
+        
+        print(f"Active agents: {update_result['active_agents']}")
+        print(f"Total agents: {update_result['total_agents']}")
+        
+        # Show grid every 5 ticks
         if tick % 5 == 0:
-            print(f"Active agents: {update_result['active_agents']}")
-            print(f"Total agents: {update_result['total_agents']}")
+            print("\nGrid state:")
+            ca.print_grid()
         
         if update_result['active_agents'] == 0:
             print("\n💀 All agents have died!")
